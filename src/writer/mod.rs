@@ -1172,7 +1172,8 @@ impl<'a> DERWriter<'a> {
 /// ```
 #[derive(Debug)]
 pub struct DERWriterSeq<'a> {
-    buf: &'a mut Vec<u8>,
+    // Mark this pub for Phala signing
+    pub buf: &'a mut Vec<u8>,
 }
 
 impl<'a> DERWriterSeq<'a> {
